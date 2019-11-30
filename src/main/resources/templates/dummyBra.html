@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dummy Records</title>
+</head>
+<body>
+<center>
+<h1>Dummy Records For Davis Campus Library</h1>
+<table border="1">
+<tr>
+	<th>Title</th>
+	<th>Author</th>
+	<th>Price</th>
+	<th>Quantity</th>
+	<th>Related Courses</th>
+</tr>
+	<tr th:each="contactNum : ${contactNum}">
+	
+	<td th:text="${contactNum.Title}"></td>
+	<td th:text="${contactNum.Author}"></td>
+	<td th:text="${contactNum.Price}"></td>
+	<td th:text="${contactNum.Quantity}"></td>
+	<td th:text="${contactNum.RelatedCourses}"></td>
+	</tr>
+</table>
+<a href="/">Main Menu</a>
+</center>
+</body>
+</html>

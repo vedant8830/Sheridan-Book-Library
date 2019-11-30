@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css" th:href="@{/css/style.css}">
+<meta charset="ISO-8859-1">
+<title>Edit Book</title>
+</head>
+<body>
+<h1 style="text-align:center;">EDIT Book</h1>
+
+<center>
+<div id="d"><br><br><br>
+<form action="/modifyAtBra" method="GET"> 
+  
+<input type="hidden" name="Id" th:value="${contactNum.Id}">
+Title:<input type="text" name="Title" th:value="${contactNum.Title}"><br>
+Author:<input type="text" name="Author" th:value="${contactNum.Author}"><br>
+Price:<input type="text" name="Price" th:value="${contactNum.Price}"><br>
+Quality:<input type="text" name="Quantity" th:value="${contactNum.Quantity}"><br>
+Related Courses:<input type="text" name="RelatedCourses" th:value="${contactNum.RelatedCourses}"><br>
+
+
+<input type="SUBMIT" value="Modify Book" /><br><br>
+</div><br><br>
+
+<button><a href="/">Main Menu</a></button>
+</center>
+
+</form>
+</body>
+</html>

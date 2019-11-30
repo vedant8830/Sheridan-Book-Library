@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css" th:href="@{/css/style.css}">
+<meta charset="ISO-8859-1">
+<title>Add Books</title>
+</head>
+<body>
+<center>
+<h1>Sheridan Book Library</h1>
+<div id="d"><br><br><br>
+<form action="/addBook" method="get">
+Title : <input type="text" name="Title"><br>
+Author:<input type="text" name="Author"><br>
+Price :<input type="text" name="Price"><br>
+Quantity :<input type="text" name="Quantity"><br>
+Related Courses: <input type="text" name="RelatedCourses"><br>
+<input type="submit" name="submit"><br>
+</div><br><br>
+<button><a href="/view">View Books</a></button> | <button><a href="/">Main Menu</a></button>
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dummy Records</title>
+</head>
+<body>
+<center>
+<h1>Dummy Records For HMC Campus Library</h1>
+<table border="1">
+<tr>
+	<th>Title</th>
+	<th>Author</th>
+	<th>Price</th>
+	<th>Quantity</th>
+	<th>Related Courses</th>
+</tr>
+	<tr th:each="contactHmc : ${contactHmc}">
+	
+	<td th:text="${contactHmc.Title}"></td>
+	<td th:text="${contactHmc.Author}"></td>
+	<td th:text="${contactHmc.Price}"></td>
+	<td th:text="${contactHmc.Quantity}"></td>
+	<td th:text="${contactHmc.RelatedCourses}"></td>
+	</tr>
+</table>
+<a href="/">Main Menu</a>
+</center>
+</body>
+</html>

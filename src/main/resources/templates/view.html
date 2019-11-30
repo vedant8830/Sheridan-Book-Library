@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css" th:href="@{/css/style.css}">
+<meta charset="ISO-8859-1">
+<title>View Book</title>
+</head>
+<body>
+<h1>Davis Books Library</h1>
+
+<table>
+<tr>
+<th>Title</th>
+<th>Author</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Related Courses</th>
+</tr>
+
+<tr>
+<tr th:each="contactNum : ${contactNum}">
+	<td th:text="${contactNum.Title}"></td>
+	<td th:text="${contactNum.Author}"></td>
+	<td th:text="${contactNum.Price}"></td>
+	<td th:text="${contactNum.Quantity}"></td>
+	<td th:text="${contactNum.RelatedCourses}"></td>
+	<td><a href="" th:href="@{/edit/{id}(id=${contactNum.id})}">EDIT</a>
+	<td><a href="" th:href="@{/delete/{id}(id=${contactNum.id})}">Delete</a>
+</tr>
+</table>
+<h1>Hmc Book Library</h1>
+
+<table border="1">
+<tr>
+<th>Title</th>
+<th>Author</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Related Courses</th>
+</tr>
+
+<tr>
+<tr th:each="contactHmc : ${contactHmc}">
+	<td th:text="${contactHmc.Title}"></td>
+	<td th:text="${contactHmc.Author}"></td>
+	<td th:text="${contactHmc.Price}"></td>
+	<td th:text="${contactHmc.Quantity}"></td>
+	<td th:text="${contactHmc.RelatedCourses}"></td>
+	<td><a href="" th:href="@{/editHmc/{id}(id=${contactHmc.id})}">EDIT</a>
+	<td><a href="" th:href="@{/deleteHmc/{id}(id=${contactHmc.id})}">Delete</a>
+</tr>
+</table>
+
+<h1>Trafalgar Book Library</h1>
+<table border="1">
+<tr>
+<th>Title</th>
+<th>Author</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Related Courses</th>
+</tr>
+
+<tr>
+<tr th:each="contactTra : ${contactTra}">
+	<td th:text="${contactTra.Title}"></td>
+	<td th:text="${contactTra.Author}"></td>
+	<td th:text="${contactTra.Price}"></td>
+	<td th:text="${contactTra.Quantity}"></td>
+	<td th:text="${contactTra.RelatedCourses}"></td>
+	<td><a href="" th:href="@{/editTra/{id}(id=${contactTra.id})}">EDIT</a>
+	<td><a href="" th:href="@{/deleteTra/{id}(id=${contactTra.id})}">Delete</a>
+</tr>
+</table>
+<br><br><br><br>
+<center>
+<button>
+<a href="/">Main Menu</a>
+</button>
+</center>
+</body>
+</html>
